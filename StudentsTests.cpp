@@ -35,6 +35,8 @@ TEST(StudentTest, addUser)
  *   name to a map. Logically, you could have the name stored twice with two 
  *   different id's but a map wouldn't allow for that so it should erase the 
  *   previous ID value "12345"
+ *
+ *   
  */
 TEST(StudentTest, mapTest)
 {
@@ -49,12 +51,14 @@ TEST(StudentTest, mapTest)
 /*
  *  Tests functionality of idForName
  *  Possible error in idForName
+ *
+ *  Appears to be returning an address? 
  */
 
 TEST(StudentTest, idForName)
 {	
 	Students* stu = new Students();
-    	 
+   	 
 	stu->addUser("Van", 12345);
     	EXPECT_EQ(12345, stu->idForName("Van"));
     	stu->addUser("Calvin", 6789);
